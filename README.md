@@ -74,31 +74,31 @@ Path to XtbGenerator.jar file.
 #### options.compiler_flags
 Type: `Object`
 Default value: `{
-  /**
-   * @type {string}
-   */
   translations_file: 'test/js-messages/messages.xtb',
-
-  /**
-   * @type {string}
-   */
   xtb_output_file: 'test/js-messages/messages.xtb',
-
-  /**
-   * @type {string}
-   */
   lang: 'cs'
 }`
 
 XtbGenerator options. See the [documentation](https://github.com/kuzmisin/xtbgenerator#usage)
+
+##### options.compiler_flags.translations_file
+Type: `String`
+Default value: `'test/js-messages/messages.xtb'`
+
+##### options.compiler_flags.xtb_output_file
+Type: `String`
+Default value: `'test/js-messages/messages.xtb'`
+
+##### options.compiler_flags.lang
+Type: `String`
+Default value: `'cs'`
 
 ### Usage Examples
 
 ```js
 grunt.initConfig({
   xtbGenerator: {
-    defaultOptions: {},
-    testOptions: {
+    generate: {
       options: {
         builder: 'bin/build/closurebuilder.py',
         root: ['test/js'],
